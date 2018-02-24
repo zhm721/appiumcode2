@@ -1,0 +1,913 @@
+[36minfo[39m: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+[36minfo[39m: Appium REST http interface listener started on 0.0.0.0:4491
+[36minfo[39m: [debug] Non-default server args: {"udid":"192.168.56.102:5555","port":4491,"bootstrapPort":2240}
+[36minfo[39m: Console LogLevel: debug
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"desiredCapabilities":{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":"True","newCommandTimeout":"600","unicodeKeyboard":"True","udid":"192.168.56.102:5555","platformName":"Android","deviceName":"devicename","resetKeyboard":"True"}}[39m
+[36minfo[39m: Client User-Agent string: Apache-HttpClient/4.5.2 (Java/1.8.0_40-ea)
+[33mwarn[39m: Converting cap noSign from string to boolean. This might cause unexpected behavior.
+[33mwarn[39m: Converting cap unicodeKeyboard from string to boolean. This might cause unexpected behavior.
+[33mwarn[39m: Converting cap resetKeyboard from string to boolean. This might cause unexpected behavior.
+[36minfo[39m: [debug] Didn't get app but did get Android package, will attempt to launch it on the device
+[36minfo[39m: [debug] Creating new appium session 8a45aa51-a775-40ce-af26-fe961936c2f8
+[36minfo[39m: Starting android appium
+[36minfo[39m: [debug] Getting Java version
+[36minfo[39m: Java version is: 1.8.0_40-ea
+[36minfo[39m: [debug] Checking whether adb is present
+[36minfo[39m: [debug] Using adb from E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe
+[33mwarn[39m: No app capability, can't parse package/activity
+[36minfo[39m: [debug] Using fast reset? true
+[36minfo[39m: [debug] Preparing device for session
+[36minfo[39m: [debug] Not checking whether app is present since we are assuming it's already on the device
+[36minfo[39m: Retrieving device
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 2 device(s) connected
+[36minfo[39m: Found device 192.168.56.102:5555
+[36minfo[39m: [debug] Setting device id to 192.168.56.102:5555
+[36minfo[39m: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 wait-for-device
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "echo 'ready'"
+[36minfo[39m: [debug] Starting logcat capture
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: Device API level is: 19
+[36minfo[39m: [debug] Extracting strings for language: default
+[36minfo[39m: [debug] Apk doesn't exist locally
+[36minfo[39m: [debug] Could not get strings, but it looks like we had an old strings file anyway, so ignoring
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "rm -rf /data/local/tmp/strings.json"
+[36minfo[39m: [debug] Not uninstalling app since server not started with --full-reset
+[36minfo[39m: [debug] Skipping install since we launched with a package instead of an app path
+[36minfo[39m: [debug] Forwarding system:2240 to device:4724
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 forward tcp:2240 tcp:4724
+[36minfo[39m: [debug] Pushing appium bootstrap to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 push "C:\\Program Files (x86)\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+[36minfo[39m: [debug] Enabling Unicode keyboard support
+[36minfo[39m: [debug] Pushing unicode ime to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "settings get secure default_input_method"
+[36minfo[39m: [debug] Unsetting IME 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "ime enable io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "ime set io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] Pushing settings apk to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 install "C:\Program Files (x86)\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
+[36minfo[39m: [debug] Pushing unlock helper app to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
+[36minfo[39m: Starting App
+[36minfo[39m: [debug] Attempting to kill all 'uiautomator' processes
+[36minfo[39m: [debug] Getting all processes with 'uiautomator'
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "ps 'uiautomator'"
+[36minfo[39m: [debug] No matching processes found
+[36minfo[39m: [debug] Running bootstrap
+[36minfo[39m: [debug] spawning: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.zhihu.android -e disableAndroidWatchers false
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Loading json...
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+[36minfo[39m: [debug] Waking up device if it's not alive
+[36minfo[39m: [debug] Pushing command to appium work queue: ["wake",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Client connected
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: wake
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "dumpsys window"
+[36minfo[39m: [debug] Screen already unlocked, continuing.
+[36minfo[39m: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+[36minfo[39m: [debug] dataDir set to: /data
+[36minfo[39m: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"\/data","status":0}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":false,"status":0}
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "getprop ro.build.version.release"
+[36minfo[39m: [debug] Device is at release version 4.4.4
+[36minfo[39m: [debug] Device launched! Ready for commands
+[36minfo[39m: [debug] Setting command timeout to 600 secs
+[36minfo[39m: [debug] Appium session started with sessionId 8a45aa51-a775-40ce-af26-fe961936c2f8
+[36minfo[39m: [37m<-- POST /wd/hub/session [39m[36m303[39m[90m 8062.453 ms - 74[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.102:5555","platformName":"Android","deviceName":"devicename","resetKeyboard":true},"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.102:5555","platformName":"Android","deviceName":"192.168.56.102:5555","resetKeyboard":true},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8 [39m[32m200[39m[90m 9.496 ms - 852[39m [90m{"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.102:5555","platformName":"Android","deviceName":"devicename","resetKeyboard":true},"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.102:5555","platformName":"Android","deviceName":"192.168.56.102:5555","resetKeyboard":true},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/timeouts[39m [90m{"type":"implicit","ms":10000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 10000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/timeouts [39m[32m200[39m[90m 6.327 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"name","value":"登录或注册"}[39m
+[33mwarn[39m: [DEPRECATED] The name locator strategy has been deprecated and will be removed.  Please use the accessibility id locator strategy instead.
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"登录或注册","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"登录或注册","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 登录或注册 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 9490.765 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"1"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"1"},"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/1/click[39m [90m{"id":"1"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"1"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/1/click [39m[32m200[39m[90m 421.523 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/email_or_phone"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/email_or_phone using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/email_or_phone]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"2"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"2"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 750.991 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"2"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/2/value[39m [90m{"id":"2","value":["crazysand_001@163.com"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"2","text":"crazysand_001@163.com","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"2","text":"crazysand_001@163.com","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: crazysand_001@163.com
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/2/value [39m[32m200[39m[90m 5668.207 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/password"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/password using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/password]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"3"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"3"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 517.293 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"3"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/3/value[39m [90m{"id":"3","value":["1234567"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"3","text":"1234567","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"3","text":"1234567","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 1234567
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/3/value [39m[32m200[39m[90m 5040.917 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/btn_confirm"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/btn_confirm using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/btn_confirm]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"4"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"4"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 488.016 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"4"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/4/click[39m [90m{"id":"4"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"4"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/4/click [39m[32m200[39m[90m 338.623 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"name","value":"忽略"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1097ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1636ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 2189ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 2903ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 3447ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4004ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4545ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5120ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5666ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6227ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6775ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 7317ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7890ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8450ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9010ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9600ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Condition unmet after 10128ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[31m500[39m[90m 10131.479 ms - 195[39m [90m[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/screenshot[39m [90m{}[39m
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "/system/bin/rm /data/local/tmp/screenshot.png; /system/bin/screencap -p /data/local/tmp/screenshot.png "
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 pull /data/local/tmp/screenshot.png "C:\\Users\\LIXION~1\\AppData\\Local\\Temp\\appium116518-9112-ch1t0o.png"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3XmUVPWd///XrX3trZpqmp3GBVBBQAURFBOTUROzqVlMNOoQMxodMzPfRBMl+WmW0Sxj4sQExGyacFzIJBoziYqBwQmJgixuEJUGWZuml+ru6q696vdH0T0UvW90f/D5OMdzrFv33s+nevF4X/35vN+WpJwAAAAAAAAMZhvpCQAAAAAAAAwWAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADCeY6QnAAAAAAAYWVVVVaqurh7WMd73vvdp1qxZA7r2lVde0XPPPTfEM8KJhoADAAAAAN7FJkyYoJkzZw57wDFr1ix98IMfHPD1BBzoDQEHAAAAgHcVr9crh8OhQCDQcSwWiymdTisajY7gzI6/iooKnXnmmSM9DWBIEHAAAAAAOOEUFxfrlFNO0SmnnKJJkyYpHA53/ONwdP8YlM1m1dDQoEOHDunQoUM6ePCg3nzzTb355puqqak5jp9g+IVCIc2dO3ekpwEMGQIOAAAAAMYLhUI655xzNGfOHM2aNUsVFRUDuo/NZlN5ebnKy8t12mmnFbzX3NysN954Q5s3b9ZLL72kd955ZyimPiKCwaDOPvts2e32kZ4KMGQsSbmRngQAAAAA9FcwGNRFF12kiy66SNOnT5fNdnybRO7bt09//vOf9cwzz+jAgQPHdezB8Pl8WrRokVwuV8Hxp59+elD3/fjHP67Zs2d3+/60adMUDocHdO/a2lrt3Lmz2/e3bdumxx9/fED3xomDgAMAAACAUc466yx94AMf0HnnnSen0znS01Eul9Orr76q//7v/9bzzz+vdDo90lPqlsfj0cKFC+Xz+Tq9N9iA41vf+pYWLlw4...","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/screenshot [39m[32m200[39m[90m 1882.152 ms - 130402[39m [90m{"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3XmUVPWd///XrX3trZpqmp3GBVBBQAURFBOTUROzqVlMNOoQMxodMzPfRBMl+WmW0Sxj4sQExGyacFzIJBoziYqBwQmJgixuEJUGWZuml+ru6q696vdH0T0UvW90f/D5OMdzrFv33s+nevF4X/35vN+WpJwAAAAAAAAMZhvpCQAAAAAAAAwWAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADAeAQcAAAAAADCeY6QnAAAAAAAYWVVVVaqurh7WMd73vvdp1qxZA7r2lVde0XPPPTfEM8KJhoADAAAAAN7FJkyYoJkzZw57wDFr1ix98IMfHPD1BBzoDQEHAAAAgHcVr9crh8OhQCDQcSwWiymdTisajY7gzI6/iooKnXnmmSM9DWBIEHAAAAAAOOEUFxfrlFNO0SmnnKJJkyYpHA53/ONwdP8YlM1m1dDQoEOHDunQoUM6ePCg3nzzTb355puqqak5jp9g+IVCIc2dO3ekpwEMGQIOAAAAAMYLhUI655xzNGfOHM2aNUsVFRUDuo/NZlN5ebnKy8t12mmnFbzX3NysN954Q5s3b9ZLL72kd955ZyimPiKCwaDOPvts2e32kZ4KMGQsSbmRngQAAAAA9FcwGNRFF12kiy66SNOnT5fNdnybRO7bt09//vOf9cwzz+jAgQPHdezB8Pl8WrRokVwuV8Hxp59+elD3/fjHP67Zs2d3+/60adMUDocHdO/a2lrt3Lmz2/e3bdumxx9/fED3xomDgAMAAACAUc466yx94AMf0HnnnSen0znS01Eul9Orr76q//7v/9bzzz+vdDo90lPqlsfj0cKFC+Xz+Tq9N9iA41vf+pYWLlw4...","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/appium/device/start_activity[39m [90m{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","appWaitPackage":"","appWaitActivity":"","dontStopAppOnReset":false}[39m
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "am start -S -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Successfully launched the app.","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/appium/device/start_activity [39m[32m200[39m[90m 1767.113 ms - 104[39m [90m{"status":0,"value":"Successfully launched the app.","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"name","value":"登录或注册"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"登录或注册","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"登录或注册","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 登录或注册 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"5"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"5"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 4487.138 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"5"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/5/click[39m [90m{"id":"5"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"5"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"5"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/5/click [39m[32m200[39m[90m 454.638 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/email_or_phone"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/email_or_phone using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/email_or_phone]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"6"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"6"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 864.177 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"6"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/6/value[39m [90m{"id":"6","value":["crazysand_001@163.com"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"6","text":"crazysand_001@163.com","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"6","text":"crazysand_001@163.com","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: crazysand_001@163.com
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/6/value [39m[32m200[39m[90m 6167.111 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/password"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/password using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/password]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"7"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"7"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 16.595 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"7"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/7/value[39m [90m{"id":"7","value":["1234567"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"7","text":"1234567","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"7","text":"1234567","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 1234567
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/7/value [39m[32m200[39m[90m 4953.867 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/btn_confirm"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/btn_confirm using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/btn_confirm]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"8"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[32m200[39m[90m 504.750 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"8"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"8"},"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/8/click[39m [90m{"id":"8"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"8"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"8"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element/8/click [39m[32m200[39m[90m 3169.699 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"name","value":"忽略"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 68ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 619ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1288ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1927ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 2526ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 3123ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 3719ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4360ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 4966ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5574ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6318ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6940ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7505ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 8099ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8736ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9670ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Condition unmet after 10558ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[31m500[39m[90m 10568.336 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/screenshot[39m [90m{}[39m
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "/system/bin/rm /data/local/tmp/screenshot.png; /system/bin/screencap -p /data/local/tmp/screenshot.png "
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 pull /data/local/tmp/screenshot.png "C:\\Users\\LIXION~1\\AppData\\Local\\Temp\\appium116518-9112-1xrki89.png"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3XmUXHWd///XvbWvvaY6nT3NlgQIkLBmwqbooOIKqIMGhYnhAHJ0nIMii/MjIw7gcpQRTQRGB8ccljgeFMdBE2FgDKNgFvhCEEgHQifp7qT36q7t1q3fH5Vu0+l970/yfJzDOdxbVZ/7qa5u9L7q83m/LUkFAQAAAAAAGMye6gkAAAAAAACMFQEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwnneqJwAAAAAAmFo1NTWqra2d0Gu85z3v0dKlS0f12pdeekm/+93vxnlGONoQcAAAAADAMWzOnDlasmTJhAccS5cu1WWXXTbq1xNwYCgEHAAAAACOKaFQSF6vV9FotOdcKpWS4zhKJpNTOLPJV1VVpdNPP32qpwGMCwIOAAAAAEedkpISnXjiiTrxxBM1b948JRKJnn+83oFvg1zXVXNzsxoaGtTQ0KD9+/fr9ddf1+uvv676+vpJfAcTr6KiQsuWLZvqaQDjhoADAAAAgPEqKip09tln64wzztDSpUtVVVU1qnFs21ZlZaUqKyt18skn93qsvb1dr776qrZu3ao//elPevvtt8dj6lMiFovprLPOksfjmeqpAOPGklSY6kkAAAAAwEjFYjFdcskluuSSS7Ro0SLZ9uQ2iayrq9Pvf/97PfXUU9q3b9+kXnsswuGwVq5cKb/f3+v8k08+OaZxP/7xj+u0004b8PHjjjtOiURiVGM3NjZq165dAz6+Y8cOPfbYY6MaG0cPAg4AAAAARjnzzDP1gQ98QH/zN38jn8831dNRoVDQyy+/rP/6r//S5s2b5TjOVE9pQMFgUCtWrFA4HO7z2FgDjrvuuksrVqwY...","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/screenshot [39m[32m200[39m[90m 2897.675 ms - 150570[39m [90m{"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3XmUXHWd///XvbWvvaY6nT3NlgQIkLBmwqbooOIKqIMGhYnhAHJ0nIMii/MjIw7gcpQRTQRGB8ccljgeFMdBE2FgDKNgFvhCEEgHQifp7qT36q7t1q3fH5Vu0+l970/yfJzDOdxbVZ/7qa5u9L7q83m/LUkFAQAAAAAAGMye6gkAAAAAAACMFQEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwHgEHAAAAAAAwnneqJwAAAAAAmFo1NTWqra2d0Gu85z3v0dKlS0f12pdeekm/+93vxnlGONoQcAAAAADAMWzOnDlasmTJhAccS5cu1WWXXTbq1xNwYCgEHAAAAACOKaFQSF6vV9FotOdcKpWS4zhKJpNTOLPJV1VVpdNPP32qpwGMCwIOAAAAAEedkpISnXjiiTrxxBM1b948JRKJnn+83oFvg1zXVXNzsxoaGtTQ0KD9+/fr9ddf1+uvv676+vpJfAcTr6KiQsuWLZvqaQDjhoADAAAAgPEqKip09tln64wzztDSpUtVVVU1qnFs21ZlZaUqKyt18skn93qsvb1dr776qrZu3ao//elPevvtt8dj6lMiFovprLPOksfjmeqpAOPGklSY6kkAAAAAwEjFYjFdcskluuSSS7Ro0SLZ9uQ2iayrq9Pvf/97PfXUU9q3b9+kXnsswuGwVq5cKb/f3+v8k08+OaZxP/7xj+u0004b8PHjjjtOiURiVGM3NjZq165dAz6+Y8cOPfbYY6MaG0cPAg4AAAAARjnzzDP1gQ98QH/zN38jn8831dNRoVDQyy+/rP/6r//S5s2b5TjOVE9pQMFgUCtWrFA4HO7z2FgDjrvuuksrVqwY...","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/appium/device/start_activity[39m [90m{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","appWaitPackage":"","appWaitActivity":"","dontStopAppOnReset":false}[39m
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "am start -S -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Successfully launched the app.","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/appium/device/start_activity [39m[32m200[39m[90m 1499.680 ms - 104[39m [90m{"status":0,"value":"Successfully launched the app.","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element[39m [90m{"using":"name","value":"忽略"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5050ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 5649ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6293ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6921ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7509ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8217ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8784ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9543ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Condition unmet after 10220ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/element [39m[31m500[39m[90m 10220.960 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/appium/device/start_activity[39m [90m{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","appWaitPackage":"","appWaitActivity":"","dontStopAppOnReset":false}[39m
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "am start -S -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"Successfully launched the app.","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/8a45aa51-a775-40ce-af26-fe961936c2f8/appium/device/start_activity [39m[32m200[39m[90m 1307.802 ms - 104[39m [90m{"status":0,"value":"Successfully launched the app.","sessionId":"8a45aa51-a775-40ce-af26-fe961936c2f8"}[39m
+[36minfo[39m: [debug] UiAutomator exited
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 shell "echo 'ping'"
+[36minfo[39m: [debug] Logcat terminated with code 0, signal null
+[36minfo[39m: error sending command, reconnecting device and retrying: shell "echo 'ping'"
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 devices
+[36minfo[39m: [debug] 0 device(s) connected
+[36minfo[39m: [debug] Could not find devices, restarting adb server...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 kill-server
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 devices
+[36minfo[39m: [debug] 0 device(s) connected
+[36minfo[39m: [debug] Could not find devices, restarting adb server...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 kill-server
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 devices
+[36minfo[39m: [debug] Could not find devices, restarting adb server...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 kill-server
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 devices
+[36minfo[39m: [debug] 0 device(s) connected
+[36minfo[39m: [debug] Could not find devices, restarting adb server...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.102:5555 kill-server

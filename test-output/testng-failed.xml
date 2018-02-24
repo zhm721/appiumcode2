@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="port" value="4491"/>
+  <parameter name="udid" value="127.0.0.1:62001"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="da926816">
+    <parameter name="port" value="4491"/>
+    <parameter name="udid" value="127.0.0.1:62001"/>
+    <classes>
+      <class name="cn.crazy.appium.testcases.ZhiHuTest"/>
+    </classes>
+  </test> <!-- da926816 -->
+  <test name="da926816(failed)" parallel="tests">
+    <parameter name="port" value="4491"/>
+    <parameter name="udid" value="127.0.0.1:62001"/>
+    <classes>
+      <class name="cn.crazy.appium.testcases.ZhiHuTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="t001_login"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- cn.crazy.appium.testcases.ZhiHuTest -->
+    </classes>
+  </test> <!-- da926816(failed) -->
+</suite> <!-- Failed suite [Suite] -->

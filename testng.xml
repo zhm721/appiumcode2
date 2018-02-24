@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="da926816">
+        <parameter name="udid" value="127.0.0.1:62001"/>
+        <parameter name="port" value="4491"/>
+        <classes>
+            <class name="cn.crazy.appium.testcases.ZhiHuTest"/>
+        </classes>
+    </test>
+</suite>

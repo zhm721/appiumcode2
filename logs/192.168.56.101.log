@@ -1,0 +1,1093 @@
+[36minfo[39m: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+[36minfo[39m: Appium REST http interface listener started on 0.0.0.0:4490
+[36minfo[39m: [debug] Non-default server args: {"udid":"192.168.56.101:5555","port":4490,"bootstrapPort":2242}
+[36minfo[39m: Console LogLevel: debug
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"desiredCapabilities":{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":"True","newCommandTimeout":"600","unicodeKeyboard":"True","udid":"192.168.56.101:5555","platformName":"Android","deviceName":"devicename","resetKeyboard":"True"}}[39m
+[36minfo[39m: Client User-Agent string: Apache-HttpClient/4.5.2 (Java/1.8.0_40-ea)
+[33mwarn[39m: Converting cap noSign from string to boolean. This might cause unexpected behavior.
+[33mwarn[39m: Converting cap unicodeKeyboard from string to boolean. This might cause unexpected behavior.
+[33mwarn[39m: Converting cap resetKeyboard from string to boolean. This might cause unexpected behavior.
+[36minfo[39m: [debug] Didn't get app but did get Android package, will attempt to launch it on the device
+[36minfo[39m: [debug] Creating new appium session 4caec29a-78a0-42a0-9454-39461b17abd8
+[36minfo[39m: Starting android appium
+[36minfo[39m: [debug] Getting Java version
+[36minfo[39m: Java version is: 1.8.0_40-ea
+[36minfo[39m: [debug] Checking whether adb is present
+[36minfo[39m: [debug] Using adb from E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe
+[33mwarn[39m: No app capability, can't parse package/activity
+[36minfo[39m: [debug] Using fast reset? true
+[36minfo[39m: [debug] Preparing device for session
+[36minfo[39m: [debug] Not checking whether app is present since we are assuming it's already on the device
+[36minfo[39m: Retrieving device
+[36minfo[39m: [debug] Trying to find a connected android device
+[36minfo[39m: [debug] Getting connected devices...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe devices
+[36minfo[39m: [debug] 1 device(s) connected
+[36minfo[39m: Found device 192.168.56.101:5555
+[36minfo[39m: [debug] Setting device id to 192.168.56.101:5555
+[36minfo[39m: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 wait-for-device
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "echo 'ready'"
+[36minfo[39m: [debug] Starting logcat capture
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: Device API level is: 19
+[36minfo[39m: [debug] Extracting strings for language: default
+[36minfo[39m: [debug] Apk doesn't exist locally
+[36minfo[39m: [debug] Could not get strings, but it looks like we had an old strings file anyway, so ignoring
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "rm -rf /data/local/tmp/strings.json"
+[36minfo[39m: [debug] Not uninstalling app since server not started with --full-reset
+[36minfo[39m: [debug] Skipping install since we launched with a package instead of an app path
+[36minfo[39m: [debug] Forwarding system:2242 to device:4724
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 forward tcp:2242 tcp:4724
+[36minfo[39m: [debug] Pushing appium bootstrap to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 push "C:\\Program Files (x86)\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+[36minfo[39m: [debug] Enabling Unicode keyboard support
+[36minfo[39m: [debug] Pushing unicode ime to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "settings get secure default_input_method"
+[36minfo[39m: [debug] Unsetting IME 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "ime enable io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "ime set io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] Pushing settings apk to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 install "C:\Program Files (x86)\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
+[36minfo[39m: [debug] Pushing unlock helper app to device...
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
+[36minfo[39m: Starting App
+[36minfo[39m: [debug] Attempting to kill all 'uiautomator' processes
+[36minfo[39m: [debug] Getting all processes with 'uiautomator'
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "ps 'uiautomator'"
+[36minfo[39m: [debug] No matching processes found
+[36minfo[39m: [debug] Running bootstrap
+[36minfo[39m: [debug] spawning: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.zhihu.android -e disableAndroidWatchers false
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Loading json...
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+[36minfo[39m: [debug] Waking up device if it's not alive
+[36minfo[39m: [debug] Pushing command to appium work queue: ["wake",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Client connected
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: wake
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window"
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Screen already unlocked, continuing.
+[36minfo[39m: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"\/data","status":0}
+[36minfo[39m: [debug] dataDir set to: /data
+[36minfo[39m: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":false,"status":0}
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "getprop ro.build.version.release"
+[36minfo[39m: [debug] Device is at release version 4.4.4
+[36minfo[39m: [debug] Device launched! Ready for commands
+[36minfo[39m: [debug] Setting command timeout to 600 secs
+[36minfo[39m: [debug] Appium session started with sessionId 4caec29a-78a0-42a0-9454-39461b17abd8
+[36minfo[39m: [37m<-- POST /wd/hub/session [39m[36m303[39m[90m 6207.876 ms - 74[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8[39m [90m{}[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.101:5555","platformName":"Android","deviceName":"devicename","resetKeyboard":true},"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.101:5555","platformName":"Android","deviceName":"192.168.56.101:5555","resetKeyboard":true},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8 [39m[32m200[39m[90m 8.617 ms - 852[39m [90m{"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"4.4.4","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.101:5555","platformName":"Android","deviceName":"devicename","resetKeyboard":true},"appPackage":"com.zhihu.android","appActivity":"com.zhihu.android.ui.activity.GuideActivity","noSign":true,"newCommandTimeout":"600","unicodeKeyboard":true,"udid":"192.168.56.101:5555","platformName":"Android","deviceName":"192.168.56.101:5555","resetKeyboard":true},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/timeouts[39m [90m{"type":"implicit","ms":10000}[39m
+[36minfo[39m: [debug] Set Android implicit wait to 10000ms
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/timeouts [39m[32m200[39m[90m 7.233 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity[39m [90m{}[39m
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":".ui.activity.GuideActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity [39m[32m200[39m[90m 198.770 ms - 100[39m [90m{"status":0,"value":".ui.activity.GuideActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["source",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: source
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"2\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"com.zhihu.android:id\/action_bar_root\" instance=\"3\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"android:id\/content\" instance=\"4\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"5\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"com.zhihu.android:id\/content_frame\" instance=\"6\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"0\"><android.support.v4.view.ViewPager index=\"0\" text=\"\" class=\"android.support.v4.view.ViewPager\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"true\" long-clickable=\"false\" password=\"false\" selected=\"false\"[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] bounds=\"[0,75][1080,1920]\" resource-id=\"com.zhihu.android:id\/pager\" instance=\"0\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1620]\" resource-id=\"\" instance=\"0\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[394,342][685,398]\" resource-id=\"com.zhihu.android:id\/guide_item_1\" instance=\"0\"\/><android.widget.RelativeLayout index=\"1\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[107,518][973,1352]\" resource-id=\"\" instance=\"1\"><android.widget.ImageView index=\"0\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[155,566][334,830]\" resource-id=\"com.zhihu.android:id\/guide_item_2\" instance=\"1\"\/><android.widget.ImageView index=\"3\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickab[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] le=\"false\" password=\"false\" selected=\"false\" bounds=\"[614,719][750,854]\" resource-id=\"com.zhihu.android:id\/guide_item_4\" instance=\"2\"\/><android.widget.ImageView index=\"4\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[811,646][973,759]\" resource-id=\"com.zhihu.android:id\/guide_item_3\" instance=\"3\"\/><android.widget.ImageView index=\"6\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[408,853][515,963]\" resource-id=\"com.zhihu.android:id\/guide_item_5\" instance=\"4\"\/><\/android.widget.RelativeLayout><\/android.support.v7.widget.LinearLayoutCompat><\/android.support.v4.view.ViewPager><android.widget.TextSwitcher index=\"2\" text=\"\" class=\"android.widget.TextSwitcher\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[300,1512][779,1637]\" resource-id=\"com.zhihu.android:id\/tip\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"观而思——知乎漫游指南\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[300,1512][779,1637]\" resource-id=\"\" instance=\"0\"\/><\/android.widget.TextSwitcher><android.view.View index=\"3\" text=\"\" class=\"a[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ndroid.view.View\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1637][1080,1656]\" resource-id=\"com.zhihu.android:id\/indicator\" instance=\"0\"\/><android.support.v7.widget.LinearLayoutCompat index=\"4\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1704][1080,1872]\" resource-id=\"com.zhihu.android:id\/bottons\" instance=\"1\"><android.widget.Button index=\"0\" text=\"登录或注册\" class=\"android.widget.Button\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1704][492,1872]\" resource-id=\"com.zhihu.android:id\/login_and_register\" instance=\"0\"\/><android.widget.Button index=\"1\" text=\"随便看看\" class=\"android.widget.Button\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[588,1704][1032,1872]\" resource-id=\"com.zhihu.android:id\/goto_world\" instance=\"1\"\/><\/android.support.v7.widget.LinearLayoutCompat><\/android.widget.RelativeLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/hierarchy>","status":0}[/APPIUM-UIAUTO][39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source [39m[32m200[39m[90m 878.917 ms - 10202[39m [90m{"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"登录或注册"}[39m
+[33mwarn[39m: [DEPRECATED] The name locator strategy has been deprecated and will be removed.  Please use the accessibility id locator strategy instead.
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"登录或注册","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"登录或注册","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 登录或注册 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"1"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 34.076 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"1"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/1/click[39m [90m{"id":"1"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"1"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/1/click [39m[32m200[39m[90m 304.655 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/email_or_phone"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/email_or_phone using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/email_or_phone]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"2"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"2"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 599.880 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"2"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/2/value[39m [90m{"id":"2","value":["crazysand_009@163.com"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"2","text":"crazysand_009@163.com","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"2","text":"crazysand_009@163.com","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: crazysand_009@163.com
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/2/value [39m[32m200[39m[90m 5768.481 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/password"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/password using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/password]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"3"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"3"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 549.874 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"3"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/3/value[39m [90m{"id":"3","value":["123456"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"3","text":"123456","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"3","text":"123456","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 123456
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/3/value [39m[32m200[39m[90m 4724.180 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/btn_confirm"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/btn_confirm using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/btn_confirm]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"4"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"4"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 512.634 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"4"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/4/click[39m [90m{"id":"4"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"4"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/4/click [39m[32m200[39m[90m 310.922 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"忽略"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 669ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 1246ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1795ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 2554ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 3076ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 3647ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4193ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4738ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5291ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 5868ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6416ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6971ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7523ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 8065ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8620ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9183ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9747ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Condition unmet after 10313ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[31m500[39m[90m 10315.165 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity[39m [90m{}[39m
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":".ui.activity.GuideActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity [39m[32m200[39m[90m 175.814 ms - 100[39m [90m{"status":0,"value":".ui.activity.GuideActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["source",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: source
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[60,617][1020,1378]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,641][996,1354]\" resource-id=\"\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"登录\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,641][996,833]\" resource-id=\"android:id\/title\" instance=\"0\"\/><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,833][996,839]\" resource-id=\"android:id\/titleDivider\" instance=\"0\"\/><android.widget.FrameLayout index=\"2\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] false\" bounds=\"[84,839][996,1354]\" resource-id=\"\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,839][996,1354]\" resource-id=\"android:id\/content\" instance=\"2\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,839][996,1354]\" resource-id=\"\" instance=\"0\"><android.widget.EditText index=\"0\" text=\"crazysand_009@163.com\" class=\"android.widget.EditText\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[144,875][936,973]\" resource-id=\"com.zhihu.android:id\/email_or_phone\" instance=\"0\"\/><android.widget.EditText NAF=\"true\" index=\"1\" text=\"\" class=\"android.widget.EditText\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"true\" scrollable=\"false\" long-clickable=\"true\" password=\"true\" selected=\"false\" bounds=\"[144,997][936,1150]\" resource-id=\"com.zhihu.android:id\/password\" instance=\"1\"\/><android.widget.RelativeLayout index=\"2\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[132,1174][948,1318]\" resource-id=\"\" instance=\"0\"><android.widget.Button index=\"0\" text=\"注册\" class=\"android.widget.Button\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[132,1174][294,1318]\" resource-id=\"com.zhihu.android:id\/btn_register\" instance=\"0\"\/><android.widget.Button index=\"1\" text=\"登录\" class=\"android.widget.Button\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[786,1174][948,1318]\" resource-id=\"com.zhihu.android:id\/btn_confirm\" instance=\"1\"\/><\/android.widget.RelativeLayout><\/android.support.v7.widget.LinearLayoutCompat><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/hierarchy>","status":0}[/APPIUM-UIAUTO][39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[60,617][1020,1378]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,641][996,1354]\" resource-id=\"\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"登录\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fals...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source [39m[32m200[39m[90m 34.143 ms - 5304[39m [90m{"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[60,617][1020,1378]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,641][996,1354]\" resource-id=\"\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"登录\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fals...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/app/reset[39m [90m{}[39m
+[36minfo[39m: [debug] Resetting app mid-session
+[36minfo[39m: [debug] Running device specific reset
+[36minfo[39m: [debug] Running fast reset (stop and clear)
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "am force-stop com.zhihu.android"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "pm clear com.zhihu.android"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to not be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/app/reset [39m[32m200[39m[90m 2837.992 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"登录或注册"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"登录或注册","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"登录或注册","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 登录或注册 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"5"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 2833.923 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"5"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"5"},"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/5/click[39m [90m{"id":"5"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"5"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"5"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/5/click [39m[32m200[39m[90m 318.344 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/email_or_phone"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/email_or_phone using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/email_or_phone]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"6"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"6"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 614.823 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"6"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/6/value[39m [90m{"id":"6","value":["crazysand_001@163.com"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"6","text":"crazysand_001@163.com","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"6","text":"crazysand_001@163.com","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: crazysand_001@163.com
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/6/value [39m[32m200[39m[90m 5890.839 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/password"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/password using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/password]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"7"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"7"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 20.995 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"7"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/7/value[39m [90m{"id":"7","value":["12345678"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"7","text":"12345678","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"7","text":"12345678","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 12345678
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/7/value [39m[32m200[39m[90m 4855.787 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/btn_confirm"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/btn_confirm","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/btn_confirm using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/btn_confirm]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"8"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"8"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 522.164 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"8"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/8/click[39m [90m{"id":"8"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"8"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"8"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/8/click [39m[32m200[39m[90m 247.001 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"忽略"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"9"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"9"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 2442.023 ms - 87[39m [90m{"status":0,"value":{"ELEMENT":"9"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/9/click[39m [90m{"id":"9"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"9"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"9"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/9/click [39m[32m200[39m[90m 1064.518 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity[39m [90m{}[39m
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":".ui.activity.MainActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity [39m[32m200[39m[90m 175.164 ms - 99[39m [90m{"status":0,"value":".ui.activity.MainActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["source",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: source
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" c[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ontent-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"2\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"com.zhihu.android:id\/action_bar_root\" instance=\"3\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"android:id\/content\" instance=\"4\"><android.support.v4.widget.DrawerLayout index=\"0\" text=\"\" class=\"android.support.v4.widget.DrawerLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"com.zhihu.android:id\/drawer_layout\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,1920]\" resource-id=\"\" instance=\"5\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,75][1080,243]\" resource-id=\"com.zhihu.android:id\/toolbar\" instance=\"0\"><android.widget.ImageButton index=\"0\" text=\"\" class=\"android.widget.ImageButton\" package=\"com.zhihu.android\" content-desc=\"知乎\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] " selected=\"false\" bounds=\"[0,75][168,243]\" resource-id=\"\" instance=\"0\"\/><android.widget.TextView index=\"1\" text=\"首页\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[180,123][300,194]\" resource-id=\"\" instance=\"0\"\/><android.support.v7.widget.LinearLayoutCompat index=\"2\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[648,75][1080,243]\" resource-id=\"\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"搜索\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[648,87][792,231]\" resource-id=\"com.zhihu.android:id\/menu_search\" instance=\"1\"\/><android.widget.TextView index=\"1\" text=\"\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"消息\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[792,87][936,231]\" resource-id=\"com.zhihu.android:id\/menu_notify\" instance=\"2\"\/><android.widget.ImageView index=\"2\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"更多选项\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[936,87][1080,231]\" resource-id=\"\" instance=\"0\"\/><\/android.support.v7.widget.LinearLayoutCompat><\/android.view.View><android.widget.FrameLayout index=\"1\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,243][1080,1920]\" resource-id=\"com.zhihu.android:id\/fragment_container\" instance=\"6\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,243][1080,1920]\" resource-id=\"\" instance=\"7\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,243][1080,1920]\" resource-id=\"\" instance=\"8\"><android.view.View index=\"0\" text=\"\" class=\"android.view.View\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,243][1080,1920]\" resource-id=\"com.zhihu.android:id\/swipe_refresh_layout\" instance=\"1\"><android.widget.ListView index=\"0\" text=\"\" class=\"android.widget.ListView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focus[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ed=\"true\" scrollable=\"true\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,243][1080,1920]\" resource-id=\"com.zhihu.android:id\/pull_to_refresh_list\" instance=\"0\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,243][1080,654]\" resource-id=\"\" instance=\"1\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,243][1032,342]\" resource-id=\"com.zhihu.android:id\/authors_layout\" instance=\"0\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,274][912,327]\" resource-id=\"\" instance=\"2\"><android.widget.TextView index=\"0\" text=\"来自\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,274][138,327]\" resource-id=\"com.zhihu.android:id\/from\" instance=\"3\"\/><android.widget.TextView index=\"1\" text=\" 电影\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[138,274][239,327]\" resource-id=\"com.zhihu.android:id\/authors\" instance=\"4\"\/><\/android.support.v7.widget.LinearLayoutCompat><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[972,267][1032,327]\" resource-id=\"com.zhihu.android:id\/avatar\" instance=\"1\"\/><\/android.widget.RelativeLayout><android.widget.TextView index=\"1\" text=\"现在亚洲有哪些气质超群的男明星？\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,342][1032,441]\" resource-id=\"com.zhihu.android:id\/title\" instance=\"5\"\/><android.support.v7.widget.LinearLayoutCompat index=\"2\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,441][1032,654]\" resource-id=\"com.zhihu.android:id\/answers\" instance=\"3\"><android.widget.TextView index=\"0\" text=\"271\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bound[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] s=\"[48,462][138,508]\" resource-id=\"com.zhihu.android:id\/voteup_count\" instance=\"6\"\/><android.widget.TextView index=\"1\" text=\"杨洋。诚然气质≠帅，但是杨洋是属于不仅帅而且是很有气质的帅的人。不得不说，在部队的日子，真的让他养成了“站如松，...\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[162,456][1032,630]\" resource-id=\"com.zhihu.android:id\/excerpt\" instance=\"7\"\/><\/android.support.v7.widget.LinearLayoutCompat><\/android.support.v7.widget.LinearLayoutCompat><android.support.v7.widget.LinearLayoutCompat index=\"1\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,655][1080,1135]\" resource-id=\"\" instance=\"4\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,655][1032,754]\" resource-id=\"com.zhihu.android:id\/authors_layout\" instance=\"1\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,686][912,739]\" resource[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] -id=\"\" instance=\"5\"><android.widget.TextView index=\"0\" text=\"来自\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,686][138,739]\" resource-id=\"com.zhihu.android:id\/from\" instance=\"8\"\/><android.widget.TextView index=\"1\" text=\" 电影\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[138,686][239,739]\" resource-id=\"com.zhihu.android:id\/authors\" instance=\"9\"\/><\/android.support.v7.widget.LinearLayoutCompat><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[972,679][1032,739]\" resource-id=\"com.zhihu.android:id\/avatar\" instance=\"2\"\/><\/android.widget.RelativeLayout><android.widget.TextView index=\"1\" text=\"张一山为什么没有成为当红小鲜肉这样的明星？\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,754][1032,922]\" resource-id=\"com.zhihu.android:id\/title\" instance=\"10\"\/><android.support.v7.widget.LinearLayoutCompat index=\"2\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" chec[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,922][1032,1135]\" resource-id=\"com.zhihu.android:id\/answers\" instance=\"6\"><android.widget.TextView index=\"0\" text=\"723\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,943][138,989]\" resource-id=\"com.zhihu.android:id\/voteup_count\" instance=\"11\"\/><android.widget.TextView index=\"1\" text=\"我个人倾向认为他们的成长方式不同。&#10;吴亦凡和鹿晗的经历大家都知道了（韩国出道的唱跳偶像）；杨洋是解放军艺术...\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[162,937][1032,1111]\" resource-id=\"com.zhihu.android:id\/excerpt\" instance=\"12\"\/><\/android.support.v7.widget.LinearLayoutCompat><\/android.support.v7.widget.LinearLayoutCompat><android.support.v7.widget.LinearLayoutCompat index=\"2\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1136][1080,1616]\" resource-id=\"\" instance=\"7\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1136][1032,1235]\" resource-id=\"com.zhihu.android:id\/authors_layout\" instance=\"2\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1167][912,1220]\" resource-id=\"\" instance=\"8\"><android.widget.TextView index=\"0\" text=\"来自\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1167][138,1220]\" resource-id=\"com.zhihu.android:id\/from\" instance=\"13\"\/><android.widget.TextView index=\"1\" text=\" 电影\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[138,1167][239,1220]\" resource-id=\"com.zhihu.android:id\/authors\" instance=\"14\"\/><\/android.support.v7.widget.LinearLayoutCompat><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[972,1160][1032,1220]\" resource-id=\"com.zhihu.android:id\/avatar\" instance=\"3\"\/><\/android.widget.RelativeLayout><android.widget.TextView index=\"1\" text=\"哪些知名的书籍和[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] 电影长期以来被严重误读了？\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1235][1032,1403]\" resource-id=\"com.zhihu.android:id\/title\" instance=\"15\"\/><android.support.v7.widget.LinearLayoutCompat index=\"2\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1403][1032,1616]\" resource-id=\"com.zhihu.android:id\/answers\" instance=\"9\"><android.widget.TextView index=\"0\" text=\"2.4K\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1424][138,1470]\" resource-id=\"com.zhihu.android:id\/voteup_count\" instance=\"16\"\/><android.widget.TextView index=\"1\" text=\"《丑小鸭》近来年对这篇童话有种所谓的新解读，也就是丑小鸭之所以会变成天鹅，只是因为他本来就是只天鹅而已，完全是...\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[162,1418][1032,1592]\" resource-id=\"com.zhihu.android:id\/excerpt\" instance=\"17\"\/><\/android.support.v7.widget.LinearLayoutCompat><\/android.support.v7.widget.LinearLayoutCompat><android.support.v7.widget.LinearLayoutCompat index=\"3\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,1617][1080,1920]\" resource-id=\"\" instance=\"10\"><android.widget.RelativeLayout index=\"0\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1617][1032,1716]\" resource-id=\"com.zhihu.android:id\/authors_layout\" instance=\"3\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1648][912,1701]\" resource-id=\"\" instance=\"11\"><android.widget.TextView index=\"0\" text=\"来自\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1648][138,1701]\" resource-id=\"com.zhihu.android:id\/from\" instance=\"18\"\/><android.widget.TextView index=\"1\" text=\" 电影\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[138,1648][239,1701]\" resource-id=\"co[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] m.zhihu.android:id\/authors\" instance=\"19\"\/><\/android.support.v7.widget.LinearLayoutCompat><android.widget.ImageView index=\"1\" text=\"\" class=\"android.widget.ImageView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[972,1641][1032,1701]\" resource-id=\"com.zhihu.android:id\/avatar\" instance=\"4\"\/><\/android.widget.RelativeLayout><android.widget.TextView index=\"1\" text=\"你最喜欢的英国男演员是谁？\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1716][1032,1815]\" resource-id=\"com.zhihu.android:id\/title\" instance=\"20\"\/><android.support.v7.widget.LinearLayoutCompat index=\"2\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1815][1032,1920]\" resource-id=\"com.zhihu.android:id\/answers\" instance=\"12\"><android.widget.TextView index=\"0\" text=\"586\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[48,1836][138,1882]\" resource-id=\"com.zhihu.android:id\/voteup_count\" instance=\"21\"\/><android.widget.TextView index=\"1\" text=\"【多图预警，流量党请慎入】看了一圈感觉现在开花（Orlando Bloom）的人气好低�[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] ��。。。伤心。不想多说，放几张图让你...\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[162,1830][1032,1920]\" resource-id=\"com.zhihu.android:id\/excerpt\" instance=\"22\"\/><\/android.support.v7.widget.LinearLayoutCompat><\/android.support.v7.widget.LinearLayoutCompat><\/android.widget.ListView><\/android.view.View><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.support.v4.widget.DrawerLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/hierarchy>","status":0}[/APPIUM-UIAUTO][39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source [39m[32m200[39m[90m 142.216 ms - 27479[39m [90m{"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[0,0][1080,1920]\" resource-id=\"\" instance=\"1\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/app/reset[39m [90m{}[39m
+[36minfo[39m: [debug] Resetting app mid-session
+[36minfo[39m: [debug] Running device specific reset
+[36minfo[39m: [debug] Running fast reset (stop and clear)
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "am force-stop com.zhihu.android"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "pm clear com.zhihu.android"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to not be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/app/reset [39m[32m200[39m[90m 2424.793 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"登录或注册"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"登录或注册","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"登录或注册","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 登录或注册 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=登录或注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"10"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"10"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 3652.982 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"10"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/10/click[39m [90m{"id":"10"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"10"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"10"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/10/click [39m[32m200[39m[90m 593.641 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/email_or_phone"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/email_or_phone","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/email_or_phone using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/email_or_phone]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"11"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"11"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 652.576 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"11"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/11/value[39m [90m{"id":"11","value":["crazysand_234@163.com"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"11","text":"crazysand_234@163.com","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"11","text":"crazysand_234@163.com","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: crazysand_234@163.com
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/11/value [39m[32m200[39m[90m 5929.576 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/password"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/password","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/password using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/password]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"12"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 508.397 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"12"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"12"},"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/12/value[39m [90m{"id":"12","value":["12345678"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"12","text":"12345678","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"12","text":"12345678","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: 12345678
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/12/value [39m[32m200[39m[90m 4980.013 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"注册"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"注册","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"注册","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 注册 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=注册, INSTANCE=0]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"13"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 523.621 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"13"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"13"},"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/13/click[39m [90m{"id":"13"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"13"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"13"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/13/click [39m[32m200[39m[90m 221.032 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"id","value":"com.zhihu.android:id/input_username_view"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.zhihu.android:id/input_username_view","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.zhihu.android:id/input_username_view","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding com.zhihu.android:id/input_username_view using ID with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.zhihu.android:id/input_username_view]
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"14"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 611.656 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"14"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"14"},"status":0}
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/14/value[39m [90m{"id":"14","value":["xxxxxx"]}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"14","text":"xxxxxx","replace":false,"unicodeKeyboard":true}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"14","text":"xxxxxx","replace":false,"unicodeKeyboard":true}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: setText
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using element passed in.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text remains after clearing, but it appears to be hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Text not cleared. Assuming remainder is hint text.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Sending plain text to element: xxxxxx
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/14/value [39m[32m200[39m[90m 4801.031 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"完成注册"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"完成注册","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"完成注册","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 完成注册 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=完成注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=完成注册, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":{"ELEMENT":"15"},"status":0}
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"15"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[32m200[39m[90m 642.239 ms - 88[39m [90m{"status":0,"value":{"ELEMENT":"15"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/15/click[39m [90m{"id":"15"}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"15"}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"15"}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: click
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element/15/click [39m[32m200[39m[90m 3112.841 ms - 76[39m [90m{"status":0,"value":true,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":true,"status":0}
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity[39m [90m{}[39m
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":".ui.activity.GuideActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/device/current_activity [39m[32m200[39m[90m 128.470 ms - 100[39m [90m{"status":0,"value":".ui.activity.GuideActivity","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source[39m [90m{}[39m
+[36minfo[39m: [debug] Pushing command to appium work queue: ["source",{}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"source","params":{}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: source
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] [APPIUM-UIAUTO] [debug] Returning result: {"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[60,490][1020,1504]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,514][996,1480]\" resource-id=\"\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"注册\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,514][996,706]\" resource-id=\"android:id\/title\" instance=\"0\"\/><android.view.View index=\"1\" text=\"\" class=\"android.view.View\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,706][996,712]\" resource-id=\"android:id\/titleDivider\" instance=\"0\"\/><android.widget.FrameLayout index=\"2\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"[39m
+[36minfo[39m: [debug] Stream still not complete, waiting
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] false\" bounds=\"[84,712][996,1480]\" resource-id=\"\" instance=\"1\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,712][996,1480]\" resource-id=\"android:id\/content\" instance=\"2\"><android.support.v7.widget.LinearLayoutCompat index=\"0\" text=\"\" class=\"android.support.v7.widget.LinearLayoutCompat\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,712][996,1480]\" resource-id=\"\" instance=\"0\"><android.widget.EditText index=\"0\" text=\"crazysand_234@163.com\" class=\"android.widget.EditText\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[144,748][936,846]\" resource-id=\"com.zhihu.android:id\/email_or_phone\" instance=\"0\"\/><android.widget.EditText NAF=\"true\" index=\"1\" text=\"\" class=\"android.widget.EditText\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"true\" selected=\"false\" bounds=\"[144,870][936,986]\" resource-id=\"com.zhihu.android:id\/password\" instance=\"1\"\/><android.widget.EditText index=\"2\" text=\"xxxxxx\" class=\"android.widget.EditText\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"true\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[144,1010][936,1108]\" resource-id=\"com.zhihu.android:id\/input_username_view\" instance=\"2\"\/><android.widget.RelativeLayout index=\"3\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[108,1132][972,1276]\" resource-id=\"com.zhihu.android:id\/captcha_image_layout\" instance=\"0\"><android.widget.EditText index=\"0\" text=\"请输入右图中字符\" class=\"android.widget.EditText\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"true\" password=\"false\" selected=\"false\" bounds=\"[144,1178][672,1276]\" resource-id=\"com.zhihu.android:id\/captcha_image_input_view\" instance=\"3\"\/><android.widget.Button NAF=\"true\" index=\"1\" text=\"\" class=\"android.widget.Button\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"true\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[672,1132][936,1276]\" resource-id=\"com.zhihu.android:id\/captcha_image_view\" instance=\"0\"\/><\/android.widget.RelativeLayout><android.widget.RelativeLayout index=\"4\" text=\"\" class=\"android.widget.RelativeLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[132,1300][948,1444]\" resource-id=\"\" instance=\"1\"><android.widget.Button index=\"0\" text=\"完成注册\" class=\"android.widget.Button\" package=\[39m
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[60,490][1020,1504]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,514][996,1480]\" resource-id=\"\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"注册\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fals...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/source [39m[32m200[39m[90m 40.272 ms - 6689[39m [90m{"status":0,"value":"<?xml version=\"1.0\" encoding=\"UTF-8\"?><hierarchy rotation=\"0\"><android.widget.FrameLayout index=\"0\" text=\"\" class=\"android.widget.FrameLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[60,490][1020,1504]\" resource-id=\"\" instance=\"0\"><android.widget.LinearLayout index=\"0\" text=\"\" class=\"android.widget.LinearLayout\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[84,514][996,1480]\" resource-id=\"\" instance=\"0\"><android.widget.TextView index=\"0\" text=\"注册\" class=\"android.widget.TextView\" package=\"com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"false\" enabled=\"true\" focusable=\"false\" focused=\"fals...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] "com.zhihu.android\" content-desc=\"\" checkable=\"false\" checked=\"false\" clickable=\"true\" enabled=\"false\" focusable=\"true\" focused=\"false\" scrollable=\"false\" long-clickable=\"false\" password=\"false\" selected=\"false\" bounds=\"[696,1300][948,1444]\" resource-id=\"com.zhihu.android:id\/btn_confirm\" instance=\"1\"\/><\/android.widget.RelativeLayout><\/android.support.v7.widget.LinearLayoutCompat><\/android.widget.FrameLayout><\/android.widget.FrameLayout><\/android.widget.LinearLayout><\/android.widget.FrameLayout><\/hierarchy>","status":0}[/APPIUM-UIAUTO][39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element[39m [90m{"using":"name","value":"忽略"}[39m
+[36minfo[39m: [debug] Waiting up to 10000ms for condition
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 52ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 647ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1212ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 1852ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 2424ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 3075ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 3640ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4201ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 4755ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5340ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 5904ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 6451ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7043ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 7636ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] Waited for 8208ms so far
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 8769ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9355ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Waited for 9888ms so far
+[36minfo[39m: [debug] Pushing command to appium work queue: ["find",{"strategy":"name","selector":"忽略","context":"","multiple":false}]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"name","selector":"忽略","context":"","multiple":false}}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command action: find
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Failed to locate element. Clearing Accessibility cache and retrying.
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Finding 忽略 using NAME with the contextId:  multiple: false
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[DESCRIPTION=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Using: UiSelector[TEXT=忽略, INSTANCE=0]
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"No element found","status":7}
+[36minfo[39m: [debug] Condition unmet after 10469ms. Timing out.
+[36minfo[39m: [debug] Responding to client with error: {"status":7,"value":{"message":"An element could not be located on the page using the given search parameters.","origValue":"No element found"},"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/element [39m[31m500[39m[90m 10471.098 ms - 195[39m [90m[39m
+[36minfo[39m: [37m-->[39m [37mGET[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/screenshot[39m [90m{}[39m
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "/system/bin/rm /data/local/tmp/screenshot.png; /system/bin/screencap -p /data/local/tmp/screenshot.png "
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 pull /data/local/tmp/screenshot.png "C:\\Users\\LIXION~1\\AppData\\Local\\Temp\\appium116525-5288-gkpmo0.png"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3Xd01FX+//HXlPQKA4FQAyglNEFAYIOCgrJYEVGUxWV3seu6rl9XaSqsuLbdFddGE4UloiKIgoLUBcUCSxXpvUcSQkjPlN8fbOaXIRAmZZK5+nycwznMZz5zP3cSksPnNfe+3xZJHgEAAAAAABjMWtMTAAAAAAAAqCwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDx7TU8AAAAAKA+r1arGjRurbt26ioqKUlhYmJxOp3JycnTq1CkdOXJEOTk5NT1NwCjNmzfX3r17A3qNfv36qUOHDhV67ebNm7VkyZIqnhF+bgg4AAAAYISGDRvqmmuuUfv27dW4cWM5HA7Z7b7/nS0OOHbt2qX//Oc/2rRpUw3NFjBHo0aNlJycHPCAo0OHDrrhhhsq/HoCDlwMAQcAAACCWp06dTRkyBD169dPsbGxZZ5bq1Yt1apVS+3atdOvf/1rbdy4UTNmzNC2bduqabYwQUREhOx2u6Kjo73H8vLy5HQ6lZ2dXYMzq3716tXTZZddVtPTAKoEAQcAAACC1pVXXqn7779fiYmJ5X5teHi4unfvrs6dOys1NVWzZ89WQUFBAGZZ/SwWi+rXr69jx45V6biRkZGKi4ur8nFrQlxcnFq2bKmWLVuqSZMmSkhI8P45d+VPSW63WxkZGTpx4oROnDihY8eOaefOndq5c6eOHz9eje8g8BwOhzp37lzT0wCqDAEHAAAAgtKQIUP0hz/8ocybUX+EhoZq+PDhatq0qSZOnKjTp09X0QxrRsuWLTVkyBAlJSVpzJgxOnr0aJWN3a9fPw0ePFjz58/XggULlJeXV2VjB5rD4VC3bt3U...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- GET /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/screenshot [39m[32m200[39m[90m 1963.013 ms - 154994[39m [90m{"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAeACAYAAAArYecKAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3Xd01FX+//HXlPQKA4FQAyglNEFAYIOCgrJYEVGUxWV3seu6rl9XaSqsuLbdFddGE4UloiKIgoLUBcUCSxXpvUcSQkjPlN8fbOaXIRAmZZK5+nycwznMZz5zP3cSksPnNfe+3xZJHgEAAAAAABjMWtMTAAAAAAAAqCwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDwCDgAAAAAAYDx7TU8AAAAAKA+r1arGjRurbt26ioqKUlhYmJxOp3JycnTq1CkdOXJEOTk5NT1NwCjNmzfX3r17A3qNfv36qUOHDhV67ebNm7VkyZIqnhF+bgg4AAAAYISGDRvqmmuuUfv27dW4cWM5HA7Z7b7/nS0OOHbt2qX//Oc/2rRpUw3NFjBHo0aNlJycHPCAo0OHDrrhhhsq/HoCDlwMAQcAAACCWp06dTRkyBD169dPsbGxZZ5bq1Yt1apVS+3atdOvf/1rbdy4UTNmzNC2bduqabYwQUREhOx2u6Kjo73H8vLy5HQ6lZ2dXYMzq3716tXTZZddVtPTAKoEAQcAAACC1pVXXqn7779fiYmJ5X5teHi4unfvrs6dOys1NVWzZ89WQUFBAGZZ/SwWi+rXr69jx45V6biRkZGKi4ur8nFrQlxcnFq2bKmWLVuqSZMmSkhI8P45d+VPSW63WxkZGTpx4oROnDihY8eOaefOndq5c6eOHz9eje8g8BwOhzp37lzT0wCqDAEHAAAAgtKQIUP0hz/8ocybUX+EhoZq+PDhatq0qSZOnKjTp09X0QxrRsuWLTVkyBAlJSVpzJgxOnr0aJWN3a9fPw0ePFjz58/XggULlJeXV2VjB5rD4VC3bt3U...","sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mPOST[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/app/reset[39m [90m{}[39m
+[36minfo[39m: [debug] Resetting app mid-session
+[36minfo[39m: [debug] Running device specific reset
+[36minfo[39m: [debug] Running fast reset (stop and clear)
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "am force-stop com.zhihu.android"
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "pm clear com.zhihu.android"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to not be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Getting device API level
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "getprop ro.build.version.sdk"
+[36minfo[39m: [debug] Device is at API Level 19
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.zhihu.android/com.zhihu.android.ui.activity.GuideActivity"
+[36minfo[39m: [debug] Waiting for pkg "com.zhihu.android" and activity "com.zhihu.android.ui.activity.GuideActivity" to be focused
+[36minfo[39m: [debug] Getting focused package and activity
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "dumpsys window windows"
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- POST /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8/appium/app/reset [39m[32m200[39m[90m 2624.592 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m
+[36minfo[39m: [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8[39m [90m{}[39m
+[36minfo[39m: Shutting down appium session
+[36minfo[39m: [debug] Pressing the HOME button
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "input keyevent 3"
+[36minfo[39m: [debug] Resetting IME to 'io.appium.android.ime/.UnicodeIME'
+[36minfo[39m: [debug] executing cmd: E:\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe -s 192.168.56.101:5555 shell "ime set io.appium.android.ime/.UnicodeIME"
+[36minfo[39m: [debug] Stopping logcat capture
+[36minfo[39m: [debug] Logcat terminated with code null, signal SIGTERM
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"shutdown"}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Got command of type SHUTDOWN
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Returning result: {"value":"OK, shutting down","status":0}
+[36minfo[39m: [debug] [BOOTSTRAP] [debug] Closed client connection
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 0[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Test results for WatcherResultPrinter=.[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] Time: 96.547[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] OK (1 test)[39m
+[36minfo[39m: [debug] [90m[UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: -1[39m
+[36minfo[39m: [debug] Sent shutdown command, waiting for UiAutomator to stop...
+[36minfo[39m: [debug] UiAutomator shut down normally
+[36minfo[39m: [debug] Cleaning up android objects
+[36minfo[39m: [debug] Cleaning up appium session
+[36minfo[39m: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}
+[36minfo[39m: [37m<-- DELETE /wd/hub/session/4caec29a-78a0-42a0-9454-39461b17abd8 [39m[32m200[39m[90m 1707.294 ms - 76[39m [90m{"status":0,"value":null,"sessionId":"4caec29a-78a0-42a0-9454-39461b17abd8"}[39m

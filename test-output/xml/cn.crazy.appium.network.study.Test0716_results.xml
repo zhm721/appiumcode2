@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="127.0.0.1:62025"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="20.630">
+  <properties />
+  
+  
+            <testcase name="login" time="20.630" classname="cn.crazy.appium.network.study.Test0716" />
+      
+</testsuite>

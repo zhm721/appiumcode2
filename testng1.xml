@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="b8bc1b72b0ec">
+        <parameter name="udid" value="b8bc1b72b0ec"/>
+        <parameter name="port" value="4491"/>
+        <parameter name="username" value="18011210012"/>
+        <parameter name="password" value="1234"/>
+        <classes>
+            <class name="cn.crazy.appium.testcases.HiBarTest"/>
+        </classes>
+    </test>
+    <test name="127.0.0.1:62001">
+        <parameter name="udid" value="127.0.0.1:62001"/>
+        <parameter name="port" value="4492"/>
+        <parameter name="username" value="17780805209"/>
+        <parameter name="password" value="1234"/>
+        <classes>
+            <class name="cn.crazy.appium.testcases.HiBarTest"/>
+        </classes>
+    </test>
+</suite>

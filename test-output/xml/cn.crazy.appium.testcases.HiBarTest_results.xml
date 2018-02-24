@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="127.0.0.1:62001"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="92.970">
+  <properties />
+  
+  
+            <testcase name="sendMessage" time="92.970" classname="cn.crazy.appium.testcases.HiBarTest" />
+      
+</testsuite>
